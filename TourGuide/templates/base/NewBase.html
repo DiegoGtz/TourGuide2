@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" >
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 </head>
@@ -35,8 +35,8 @@
   		</div>
   		<nav id="nav-menu-container">
 			<ul class="nav-menu">
-				<li class="menu-active" ><a href="#home"> Home </a> </li>	
-				<li><a href="#team"> Team </a> </li>
+				<li class="menu-active" ><a href="{% url 'login:User_index_view' %}"> Home </a> </li>	
+
 				<li><a href="{% url 'login:register' %}"> Register </a></li>
 				<li>
 					<a href="{% url 'login:login' %}" data-dismiss="modal" aria-hidden="true" data-toggle="modal" >Login</a>
@@ -59,7 +59,7 @@
 		<div class="hero-container">
 			<h1>Welcome to Tour Guide</h1>
 			<h2>Analyze your favorite images</h2>
-			<a href="#about" class="btn-get-started">Get Started</a>
+			<a href="{% url 'aplicacion:indexApl' %}" class="btn-get-started">Get Started</a>
 		</div>	
 	</section>	
 {% endblock %}

@@ -25,5 +25,6 @@ urlpatterns = [
     path('',index, name = 'index'),
 
     path('login/', include('apps.Usuario.urls' , namespace = 'login')),
+    path('Tour_Guide11/', include('apps.aplicacion.urls' , namespace = 'aplicacion')),
 
 ]

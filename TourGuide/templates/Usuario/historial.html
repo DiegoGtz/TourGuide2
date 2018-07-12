@@ -16,7 +16,7 @@
 				<li class="" ><a href="#">{{user.first_name}}</a> </li>	
 
 
-				<li><a href="#team"> Perfil  </a> </li>
+
 			
 <!--				<li>
 					<a href="{% url 'login:logout' %}" data-dismiss="modal" aria-hidden="true" data-toggle="modal" >Cerrar</a>
@@ -24,8 +24,8 @@
 
 				<li class="nav-item dropdown"><a href="#" >Option</a>
 		            <ul >
-		              <li><a href="#"><i class="fa fa-folder-open-o"></i>&nbsp Record</a></li>
-		              <li><a href="#"><i class="fa fa-address-book"></i> &nbsp Profile</a></li>
+		              <li><a href="{% url 'login:Historial' %}"><i class="fa fa-folder-open-o"></i>&nbsp Record</a></li>
+		              <li><a href="{% url 'login:profile' user.first_name %}"><i class="fa fa-address-book"></i> &nbsp Profile</a></li>
 		              <li><a href="{% url 'login:logout' %}" data-dismiss="modal" aria-hidden="true" data-toggle="modal"> <i class="fa fa-times"></i>  &nbsp Logout</a></li>
 		
 		            </ul>
