@@ -34,7 +34,9 @@ def info2(request):
 
 	os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "melvin-afa24119e798.json"	
 	vision_client = vision.ImageAnnotatorClient()
-	myfile = request.FILES["file1"]	
+
+	myfile = request.FILES["file1"]
+
 	fs = FileSystemStorage()
 	filename = fs.save(myfile.name, myfile)
 	file_name = fs.url(filename)
