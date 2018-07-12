@@ -81,8 +81,8 @@ DATABASES = {
         'ENGINE': 'mysql_cymysql',
         'NAME': 'tour_guidedb',
         'USER':'root',#cambiar por los datos de su bd
-        'PASSWORD':'avefenix',#cambiar por los datos de su bd
-        'HOST':'localhost',
+        'PASSWORD':'',#cambiar por los datos de su bd
+        'HOST':'',
         'PORT':'',
     }
 }
@@ -134,3 +134,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS =(os.path.join(BASE_DIR,'static'),)
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'tourguide.pe@gmail.com'
+EMAIL_HOST_PASSWORD = 'tourguide2018'
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

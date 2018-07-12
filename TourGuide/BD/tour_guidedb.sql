@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.1
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
--- Tiempo de generación: 12-07-2018 a las 00:49:43
--- Versión del servidor: 5.7.13-log
--- Versión de PHP: 7.0.20
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 12-07-2018 a las 04:41:59
+-- Versión del servidor: 10.1.29-MariaDB
+-- Versión de PHP: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -113,7 +113,7 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$100000$DPucQ33aY6yr$IoCmG9ex8ZfXHTZDBriVcYyEmgu5XJ9IcOo0Pi44TGg=', '2018-07-11 22:53:26.281861', 1, 'admin', 'Juanillo', 'Lopez', 'admin@gmail.com', 1, 1, '2018-06-25 22:52:12.417547'),
+(1, 'pbkdf2_sha256$100000$XfjyBKzo3uTi$FoFfM5uOrl31cOKj1qsSywFeXrZeZfEUC6kJvOYOKY4=', '2018-07-12 02:41:32.907504', 1, 'admin', 'Renzo', 'Lopez', 'rmzo.cc@gmail.com', 1, 1, '2018-06-25 22:52:12.417547'),
 (7, 'pbkdf2_sha256$100000$jGEdt4Q73Fem$viFbHYOh+kn3wsmyYwVpr1fRNPACGc3PpW1kDvf0yhw=', '2018-07-08 02:23:48.775201', 0, 'admin5', 'Neymar', 'da Silva Santos JúniorJúnior', 'admin5@gmail.com', 0, 1, '2018-07-08 00:56:00.453503'),
 (8, 'pbkdf2_sha256$100000$CkTlc60gB4CS$9BxRmwAa8s5aAZRqSttQn5sfHC5f5+FMU9MoASovYdo=', '2018-07-08 02:44:42.043613', 0, 'admin7', 'Lionel', 'Messi ', 'admin7@gmail.com', 0, 1, '2018-07-08 01:05:50.183260'),
 (9, 'pbkdf2_sha256$100000$dplgKvUgy80H$X2IsBst22jxdWQlp4lw2XwXY5+kwr+15xiUszOVz6Vw=', '2018-07-10 02:45:59.732191', 0, 'admin8', 'qwewqe', 'qweqwe', 'admin8@gmail.com', 0, 1, '2018-07-10 02:45:48.762704');
@@ -262,6 +262,7 @@ INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALU
 ('rnl5kj9fsfi8yf27l3h3yx1vi7kvr0tk', 'NDhmYmRmOGFhMmVmOThjNjk5ZDdlZmE4NDRiNWU4MGE1ZjdlODYzNjp7Il9hdXRoX3VzZXJfaGFzaCI6IjAyNTBkNTc2MDE0Y2NlMmFjNzc4NDhmZTAyNjBhYzYyMTg0YmYxODYiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImFwcHMuVXN1YXJpby5iYWNrZW5kcy5FbWFpbEF1dGhCYWNrZW5kIn0=', '2018-07-15 15:00:59.879777'),
 ('t6iz14nhd83p2ybvzzeae6wqx4ps6nqx', 'NDhmYmRmOGFhMmVmOThjNjk5ZDdlZmE4NDRiNWU4MGE1ZjdlODYzNjp7Il9hdXRoX3VzZXJfaGFzaCI6IjAyNTBkNTc2MDE0Y2NlMmFjNzc4NDhmZTAyNjBhYzYyMTg0YmYxODYiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImFwcHMuVXN1YXJpby5iYWNrZW5kcy5FbWFpbEF1dGhCYWNrZW5kIn0=', '2018-07-15 04:28:25.734955'),
 ('vli7wdr2b6gyi9dg4c5vv9c5x9xkwg3t', 'Yzg1MzY3MjUwZDk4MjUxYzc5MWY4MjFlY2ZkYWNiY2MzYmRiZDRiYjp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiYXBwcy5Vc3VhcmlvLmJhY2tlbmRzLkVtYWlsQXV0aEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIwMjUwZDU3NjAxNGNjZTJhYzc3ODQ4ZmUwMjYwYWM2MjE4NGJmMTg2In0=', '2018-07-15 03:40:51.251085'),
+('ytrmcei4s05fmrruwgqpanrmt9muhnzf', 'NmZkZTg0YzM4ZjAwZmY0NWRkM2Y5ZmQ0ZGNhMzFiZGIxY2UyODdlMDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9oYXNoIjoiNjg1MGE2YmE4MmU3ZmIzNTViMDA0OWZlMzBmYWMwOTY4MWI5MmY3NyIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImFwcHMuVXN1YXJpby5iYWNrZW5kcy5FbWFpbEF1dGhCYWNrZW5kIn0=', '2018-07-26 02:41:32.929490'),
 ('zmaij17mqxs9nu4rhdxd66cx67sp2l5g', 'NDJkNzU5ZGJmODg0ZmM0MDlkMWEwY2ExMjg4MTUzYmQ2NWZjN2I2Njp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImFwcHMuVXN1YXJpby5iYWNrZW5kcy5FbWFpbEF1dGhCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6IjEiLCJfYXV0aF91c2VyX2hhc2giOiIwMjUwZDU3NjAxNGNjZTJhYzc3ODQ4ZmUwMjYwYWM2MjE4NGJmMTg2In0=', '2018-07-15 04:58:26.034959');
 
 -- --------------------------------------------------------
@@ -500,56 +501,67 @@ ALTER TABLE `usuario_imageninfo`
 --
 ALTER TABLE `auth_group`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `auth_group_permissions`
 --
 ALTER TABLE `auth_group_permissions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `auth_permission`
 --
 ALTER TABLE `auth_permission`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 --
 -- AUTO_INCREMENT de la tabla `auth_user`
 --
 ALTER TABLE `auth_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
 --
 -- AUTO_INCREMENT de la tabla `auth_user_groups`
 --
 ALTER TABLE `auth_user_groups`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `auth_user_user_permissions`
 --
 ALTER TABLE `auth_user_user_permissions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT de la tabla `django_content_type`
 --
 ALTER TABLE `django_content_type`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT de la tabla `django_migrations`
 --
 ALTER TABLE `django_migrations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 --
 -- AUTO_INCREMENT de la tabla `usuario_historialusuario`
 --
 ALTER TABLE `usuario_historialusuario`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+
 --
 -- AUTO_INCREMENT de la tabla `usuario_imageninfo`
 --
 ALTER TABLE `usuario_imageninfo`
   MODIFY `idimagen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
 --
 -- Restricciones para tablas volcadas
 --

@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import  include
-from django.urls import path
+from django.urls import path,re_path
 from apps.Usuario.views import index
+from django.contrib.auth.views import password_reset, password_reset_done, password_reset_confirm, password_reset_complete
 
 
 urlpatterns = [
@@ -26,5 +27,9 @@ urlpatterns = [
 
     path('login/', include('apps.Usuario.urls' , namespace = 'login')),
     path('Tour_Guide11/', include('apps.aplicacion.urls' , namespace = 'aplicacion')),
+    path('reset/password_reset', password_reset, {'template_name':'Registration/password_reset_form.html', 'email_template_name': 'Registration/password_reset_email.html'}, name='password_reset'),
+    path('reset/password_reset_done', password_reset_done, {'template_name': 'Registration/password_reset_done.html'}, name = "password_reset_done"),
+    re_path('reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})', password_reset_confirm, {'template_name': 'Registration/password_reset_confirm.html'}, name= "password_reset_confirm"),
+    path('reset/done', password_reset_complete, {'template_name': 'Registration/password_reset_complete.html'}, name='password_reset_complete'),
 
 ]
